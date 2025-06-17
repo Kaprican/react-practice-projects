@@ -1,9 +1,10 @@
 import React, { useCallback, useState } from 'react';
-import './index.scss';
+import './modal.scss';
 
-function App() {
+export function Modal() {
     const [isModalOpen, setModalOpen] = useState(false);
     const toggleModal = useCallback(() => setModalOpen((v) => !v), []);
+
     return (
         <div className="App">
             <button className="open-modal-btn" onClick={toggleModal}>✨ Открыть окно</button>
@@ -23,5 +24,3 @@ function App() {
         </div>
     );
 }
-
-export default App;
